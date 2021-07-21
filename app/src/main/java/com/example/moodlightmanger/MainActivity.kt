@@ -8,6 +8,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.widget.AppCompatButton
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         db = FirebaseFirestore.getInstance()
         loadpw()
-        findViewById<Button>(R.id.button).setOnClickListener {
+        findViewById<AppCompatButton>(R.id.button).setOnClickListener {
             if(findViewById<EditText>(R.id.editText).text.toString() == pw){
                 startActivity(Intent(this, TodayTopicActivity::class.java))
 

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.widget.AppCompatButton
 import com.google.firebase.firestore.FirebaseFirestore
 
 class TodayTopicActivity : AppCompatActivity() {
@@ -20,7 +21,7 @@ class TodayTopicActivity : AppCompatActivity() {
 
         loadTodayInformation()
 
-        findViewById<Button>(R.id.button).setOnClickListener {
+        findViewById<AppCompatButton>(R.id.button).setOnClickListener {
             db.collection("post").document("information").update("todayQuestion", editText.text.toString()
             , "todayHappyCount", 0
             , "todayMadCount", 0
