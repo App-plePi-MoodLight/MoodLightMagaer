@@ -1,12 +1,12 @@
 package com.example.moodlightmanger
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.view.isVisible
 import com.example.moodlight.api.ServerClient
@@ -17,11 +17,11 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MainActivity : AppCompatActivity() {
-
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_login)
+
         findViewById<AppCompatButton>(R.id.loginBtn).setOnClickListener {
 
             val email: String = findViewById<EditText>(R.id.loginIdEtv).text.toString()
@@ -87,7 +87,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-
     }
 
     private fun errorVisible(errorText : String) : Unit {
@@ -95,5 +94,6 @@ class MainActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.loginErrorTv).text = errorText
         findViewById<TextView>(R.id.loginErrorTv).isVisible = true
     }
+
 
 }
