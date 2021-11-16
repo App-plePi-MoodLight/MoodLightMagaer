@@ -43,16 +43,14 @@ class QuestionAdapter (val questionList : AllQuestionModel)
 
             questionEditBtn.setOnClickListener {
                 var intent = Intent(itemView.context, QuestionEditActivity::class.java)
-                intent.putExtra("id", questionList[position].id)
-                intent.putExtra("mood", questionList[position].mood)
-                intent.putExtra("date", questionList[position].activatedDate)
+                intent.putExtra("question", questionList[position])
                 itemView.context.startActivity(intent)
             }
             questionDeleteBtn.setOnClickListener {
-                var intent = Intent(itemView.context, QuestionEditActivity::class.java)
-                intent.putExtra("id", questionList[position].id)
-                itemView.context.startActivity(intent)
+
             }
         }
     }
+
+
 }

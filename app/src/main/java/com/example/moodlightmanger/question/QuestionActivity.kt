@@ -22,13 +22,7 @@ class QuestionActivity : AppCompatActivity() {
 
         ServerClient.getApiService().getQuestionAll()
             .enqueue(object : Callback<AllQuestionModel> {
-                /**
-                 * Invoked for a received HTTP response.
-                 *
-                 *
-                 * Note: An HTTP response may still indicate an application-level failure such as a 404 or 500.
-                 * Call [Response.isSuccessful] to determine if the response indicates success.
-                 */
+
                 override fun onResponse(
                     call: Call<AllQuestionModel>,
                     response: Response<AllQuestionModel>,

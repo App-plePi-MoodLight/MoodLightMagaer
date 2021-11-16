@@ -1,14 +1,9 @@
 package com.example.moodlightmanger.api
 
-import com.example.moodlightmanger.model.AuthModel
-import com.example.moodlightmanger.model.LoginModel
-import com.example.moodlightmanger.model.QuestionCreateModel
+import com.example.moodlightmanger.model.*
 import com.example.moodlightmanger.model.question.AllQuestionModel
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface ApiService {
     @POST("auth/login")
@@ -23,4 +18,8 @@ interface ApiService {
 
     @GET("question")
     fun getQuestionAll() : Call<AllQuestionModel>
+
+    @PUT("question")
+    fun editQuestion(@Body editQuestionModel: EditQuestionModel) : Call<SuccessResponseModel>
+
 }
