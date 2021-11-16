@@ -1,7 +1,7 @@
 # MoodLight Manager
 
 ## 📚 Description
-This is MoodLight Admin Application.
+It is an application mood light that records, talks, and shares my feelings.
 
 ## 👨‍👧‍👦 Team
 
