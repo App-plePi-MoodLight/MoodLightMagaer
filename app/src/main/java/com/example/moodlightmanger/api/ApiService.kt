@@ -22,4 +22,6 @@ interface ApiService {
     @PUT("question")
     fun editQuestion(@Body editQuestionModel: EditQuestionModel) : Call<SuccessResponseModel>
 
+    @DELETE("question/{questionId}")
+    fun deleteData(@Path("questionId") questionId : String) : Call<SuccessResponseModel>
 }
